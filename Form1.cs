@@ -36,7 +36,7 @@ namespace NASAAPI
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            string url = "https://api.nasa.gov/planetary/apod?api_key=YOUR_NASA_API";
+            string url = "https://api.nasa.gov/planetary/apod?api_key=YOUR_NASAAPI";
             var parsed = JsonConvert.DeserializeObject<JsonReading>(new WebClient().DownloadString(url));
             label1.Text = parsed.explanation;
             label2.Text = parsed.date;
